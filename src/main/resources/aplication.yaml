@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: task_handler
+server:
+  port: 3433 # ????????? ?????????? ?????
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
