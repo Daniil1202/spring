@@ -3,6 +3,7 @@ package ru.gb.spring.service;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.gb.spring.aspect.UserAction;
+import ru.gb.spring.aspect.UserAction2;
 import ru.gb.spring.model.Task;
 import ru.gb.spring.repository.TaskRepository;
 
@@ -29,6 +30,7 @@ public class TaskService {
     public Task getTaskById(Long id){  // поиск по id
         return taskRepository.findById(id).orElseThrow(null);
     }
+    @UserAction2
     public Task updateTask( Long id,String description){ //обновление  задачи
        Task task =  taskRepository.findById(id).orElse(null);
         assert task != null;
