@@ -34,6 +34,7 @@ public class TaskService {
     public Task updateTask( Long id,String description){ //обновление  задачи
        Task task =  taskRepository.findById(id).orElse(null);
         assert task != null;
+        task.setDescription(description);
         taskRepository.save(task);
         return task;
 

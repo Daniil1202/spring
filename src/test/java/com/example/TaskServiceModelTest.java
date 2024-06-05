@@ -29,7 +29,6 @@ public class TaskServiceModelTest {
     @Mock
     private TaskRepository repository;
 
-    private static Task taskForTest;
     @Test
     public void addTaskCorrectFlow(){
         //блок предусловия

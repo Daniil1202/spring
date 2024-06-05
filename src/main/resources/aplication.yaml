@@ -1,12 +1,4 @@
-spring:
-  application:
-    name: spring
-server:
-  port: 3433 # ????????? ?????????? ?????
-
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
+spring.application.name=spring
+  #management.endpoints.web.exposure.include=*
+management.endpoint.health.show-details=always
+management.endpoints.web.exposure.include=metrics, prometheus, health
