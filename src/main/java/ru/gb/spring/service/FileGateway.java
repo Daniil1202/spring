@@ -6,8 +6,6 @@ import org.springframework.messaging.handler.annotation.Header;
 
 ;
 @MessagingGateway(defaultRequestChannel = "textInputChannel")
-public class FileGatwey {
-    void writeFile(@Header(FileHeaders.FILENAME) String filename, String data) {
-
-    }
+public interface FileGateway{
+    void writeFile(@Header(FileHeaders.FILENAME)String filename,String data);
 }

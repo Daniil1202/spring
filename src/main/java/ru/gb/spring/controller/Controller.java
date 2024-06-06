@@ -5,7 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ru.gb.spring.model.Task;
-import ru.gb.spring.service.FileGatwey;
+import ru.gb.spring.service.FileGateway;
+import ru.gb.spring.service.FileGateway;
 import ru.gb.spring.service.TaskService;
 
 import java.util.List;
@@ -16,7 +17,7 @@ import java.util.List;
 public class Controller {
 
     private final TaskService taskService;
-    private final FileGatwey fileGatwey;
+    private final FileGateway fileGateway;
 
     @GetMapping
     public ResponseEntity<List<Task>> getAllTasks(){ //получение всех задач

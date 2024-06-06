@@ -15,6 +15,9 @@ public class Task {
     @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
+    private TasksStatus status;
+
     @Column(name = "CREATE_DATE",nullable = false)
     private LocalDateTime localDateTime;
 }
