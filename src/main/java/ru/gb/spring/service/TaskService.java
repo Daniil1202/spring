@@ -9,11 +9,13 @@ import ru.gb.spring.repository.TaskRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 @AllArgsConstructor
 public class TaskService {
     private final TaskRepository taskRepository;
+    private final AtomicLong atomicLong = new AtomicLong();
 
     public List<Task> getAllTasks() { // получение списка всех задач
         return taskRepository.findAll();
